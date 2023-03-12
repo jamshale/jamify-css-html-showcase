@@ -32,7 +32,6 @@ body {
 }
 
 h1, h2, h3 {
-    color: var(--color-headings);
     margin-bottom: 1rem;
     line-height: 1.1;
 }
@@ -186,7 +185,8 @@ a {
 }
 
 .icon--white {
-    fill: white;
+    stroke: white;
+    fill: #3b3e41;
 }
 
 .icon-container {
@@ -511,6 +511,7 @@ a {
 
 .testimonial__image {
     position: relative;
+    padding: 1rem 20px;
 }
 
 .testimonial__image > img {
@@ -520,7 +521,7 @@ a {
 .testimonial__image > .icon-container {
     position: absolute;
     top: 3rem;
-    right: -32px;
+    right: 8px;
 }
 
 @media screen and (min-width: 768px) {
@@ -625,10 +626,6 @@ a {
 .block--dark {
     background: black;
     color: #7b858b;
-}
-
-.block--dark h1, h2, h3 {
-    color: white;
 }
 
 .block--skewed-right {
@@ -796,10 +793,6 @@ a {
 
 /* Showcase Block */
 
-/* .showcase__title {
-    font-size: 3rem;
-} */
-
 .block-showcase__image > img {
     width: 100%;
 }
@@ -819,25 +812,79 @@ a {
     }
 }
 
-/* .showcase__content {
-    display: flex;
-    margin-bottom: 10rem;
+/* Footer */
+.footer {
+    background: #232323;
 }
 
-.showcase__body {
-    margin-left: 1rem;
+.footer__section {
+    padding: 2rem;
+    border-bottom: 1px solid #393939;
 }
 
-.showcase__body h3 {
+.footer__section .list {
+    margin: 0;
+}
+
+.footer__heading {
+    text-transform: uppercase;
+    font-weight: 500;
     color: white;
-    font-size: 1.7rem;
-    margin-top: 0;
 }
 
-.showcase__body p {
-    font-size: 1.5rem;
+.footer__brand {
+    margin-top: 5rem;
+    text-align: center;
 }
 
-.showcase__body .icon {
-    display: flex;
-} */
+.footer__brand img {
+    width: 100%;
+    max-width: 230px;
+}
+
+.footer__copyright {
+    color: white;
+    font-size: 2.1rem;
+    opacity: .3;
+}
+
+.footer a {
+    color: #777;
+    transition: color .3s;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+@media screen and (min-width: 768px) {
+    .footer__sections {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+
+    .footer .collapsible__chevron {
+        display: none;
+    }
+
+    .footer .collapsible__content {
+        opacity: 1;
+        max-height: 100%;
+    }
+
+    .footer__brand {
+        order: -1;
+        margin-top: 1rem;
+    }
+
+    .footer__copyright {
+        font-size: 1.5rem;    
+    }
+
+    .footer__section {
+        border: 0;
+    }
+    
+    .footer__heading {
+        font-size: 1.6rem;
+    }
+}
